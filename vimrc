@@ -39,7 +39,8 @@ syntax on		" syntax highlight
 set hlsearch		" search highlighting
 
 if has("gui_running")	" GUI color and font settings
-  set guifont=Osaka-Mono:h20
+"  set guifont=Osaka-Mono:h20
+  set guifont=Source_Code_Pro:h16
   set background=dark 
   set t_Co=256          " 256 color mode
   set cursorline        " highlight current line
@@ -75,8 +76,8 @@ set tm=500
 
 " TAB setting{
    set expandtab        "replace <TAB> with spaces
-   set softtabstop=3 
-   set shiftwidth=3 
+   set softtabstop=4 
+   set shiftwidth=4 
 
    au FileType Makefile set noexpandtab
 "}      							
@@ -323,6 +324,7 @@ hi link EasyMotionShade  Comment
 nnoremap <silent> <F7> :TagbarToggle<CR> 
 " set focus to TagBar when opening it
 let g:tagbar_autofocus = 1
+let g:tagbar_ctags_bin = '/usr/local/bin/ctags'
 
 " --- PowerLine
 " let g:Powerline_symbols = 'fancy' " require fontpatcher
